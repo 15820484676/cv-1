@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+#screen {
+  width: 500px;
+  height: 800px;
+  word-wrap: break-word;
+  overflow-y: auto;
+  border: 1px solid rgb(190, 187, 187);
+  border-radius: 5px;
+  padding: 10px;
+}
+/* 去掉滚动条 */
+#screen::-webkit-scrollbar {
+  width: 0 !important;
+}
+.warpper {
+  position: absolute;
+  top: 0px;
+  left: 520px;
+}
+@keyframes run {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* 媒体查询 */
+@media (max-width: 500px) {
+  #screen {
+    width: 100vw;
+    height: 50vh;
+  }
+
+  .warpper {
+    position: absolute;
+    top: 60vh;
+    left: 50vw;
+    transform: translateX(-50%);
+  }
+}
